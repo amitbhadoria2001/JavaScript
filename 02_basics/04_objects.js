@@ -118,7 +118,7 @@ console.log(ins) //this is called destructuring
 //     "email":"A@gmail.com"
 // }
 
-//Api
+//Api 
 [
     {},
     {},
