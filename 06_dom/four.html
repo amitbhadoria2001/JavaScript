@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final DOM</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    //Below two methods are the use to create and add the Element 
+    function addLang(langName){
+       const li = document.createElement('li');
+       li.innerHTML = `${langName}`
+       document.querySelector('.language').appendChild(li)
+    //    console.log(li)
+
+    }
+    addLang('Python')
+    addLang('Cpp')
+
+    // The above work we have done is used to add the items in the list by using javascript
+    // now we will do the same thing bur in a little optimised way
+
+    function addOptiElement(langName){
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+    }
+    addOptiElement('ruby on rails')
+
+    //Above are the two different methods to create the element
+
+    //Now we'll how to edit the created element 
+    //Edit
+
+    const secondLang = document.querySelector("li:nth-child(4)")
+    //console.log(secondLang)
+
+    // secondLang.innerHTML = 'Mojo';
+    //another way to edit the element is 
+    const newLi = document.createElement('li')
+    newLi.textContent = 'Mojo'
+    secondLang.replaceWith(newLi)
+
+    //edit#2
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+
+    // this is how we create edit and remove the elements using Js.
+
+
+</script>
+
+</html>
