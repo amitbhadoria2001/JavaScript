@@ -7,10 +7,10 @@ if(userEmail){
 }
 
 //falsy values 
-// false, 0 , -0, BigInt - 2309n, null,undefined,NaN
+// false, 0 , -0, BigInt - 2309n, null,undefined,NaN, ""
 
 //truthy values
-// "0","false"," ",{},function(){}
+// "0","false"," ",{},function(){},[]
 
 // if(userEmail.length === 0){
 //     console.log("Array is empty")
@@ -22,7 +22,8 @@ if(Object.keys(object).length === 0){
 }
 
 // Nullish Coalescing Operator(??): null undefined
-
+// thsi is use when we fetch data
+// from api and if it returns null nad the other value will be assigned to it 
 let val1;
 val1 = 5 ?? 10
 let val2 = null ?? 10
