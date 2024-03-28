@@ -18,6 +18,11 @@ function printHello(){
 }
 coding.forEach(printHello)
 
+// the for each return three things item , index , arr
+coding.forEach(items , index , arr){
+   console.log(item,index,arr)
+}
+
 //now applying for each on Objects
 
 const myArray = [
